@@ -1,10 +1,9 @@
-package com.imooc.controller;
+package com.imooc.pay.controller;
 
-import com.imooc.service.impl.PayServiceImpl;
+import com.imooc.pay.service.impl.PayServiceImpl;
 import com.lly835.bestpay.model.PayResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 

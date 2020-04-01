@@ -1,4 +1,4 @@
-package com.imooc.config;
+package com.imooc.pay.config;
 
 import com.lly835.bestpay.config.WxPayConfig;
 import com.lly835.bestpay.service.BestPayService;

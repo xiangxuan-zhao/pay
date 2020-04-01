@@ -1,6 +1,6 @@
-package com.imooc.service.impl;
+package com.imooc.pay.service.impl;
 
-import com.imooc.service.IPayService;
+import com.imooc.pay.service.IPayService;
 import com.lly835.bestpay.enums.BestPayTypeEnum;
 import com.lly835.bestpay.model.PayRequest;
 import com.lly835.bestpay.model.PayResponse;
