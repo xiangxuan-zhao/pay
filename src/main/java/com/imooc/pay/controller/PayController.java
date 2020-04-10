@@ -26,13 +26,13 @@ public class PayController {
     @GetMapping("/create")
     public ModelAndView create(@RequestParam("orderId") String orderId,
                                @RequestParam("amount") BigDecimal amount,
-                               @RequestParam("payType")BestPayTypeEnum payTypeEnum){
+                               @RequestParam("payType")BestPayTypeEnum bestPayTypeEnum){
         Map<String,String> map = new HashMap<>();
-        PayResponse payResponse = payService.create(orderId, amount, payTypeEnum);
-        if(payTypeEnum == BestPayTypeEnum.WXPAY_NATIVE){
+        PayResponse payResponse = payService.create(orderId, amount, bestPayTypeEnum);
+        if(bestPayTypeEnum == BestPayTypeEnum.WXPAY_NATIVE){
             map.put("codeUrl",payResponse.getCodeUrl());
             return new ModelAndView("createForWxPayNative",map);
-        }else if(payTypeEnum == BestPayTypeEnum.ALIPAY_PC){
+        }else if(bestPayTypeEnum == BestPayTypeEnum.ALIPAY_PC){
             map.put("body",payResponse.getBody());
             return new ModelAndView("createForAlipayPc",map);
         }

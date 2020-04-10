@@ -19,11 +19,13 @@ import java.math.BigDecimal;
 @Slf4j
 @Service
 public class PayServiceImpl implements IPayService {
+
     @Autowired
     private BestPayService bestPayService;
 
     @Override
     public PayResponse create(String orderId, BigDecimal amount, BestPayTypeEnum payTypeEnum) {
+        //写入数据库
         PayRequest payRequest = new PayRequest();
         payRequest.setOrderName("6814129-xiangxuan");
         payRequest.setOrderId(orderId);
