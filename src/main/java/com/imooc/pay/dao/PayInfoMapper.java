@@ -1,10 +1,12 @@
 package com.imooc.pay.dao;
 
 import com.imooc.pay.pojo.PayInfo;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Administrator
  */
+@Component
 public interface PayInfoMapper {
     /**
      * 根据id 删除
@@ -47,4 +49,12 @@ public interface PayInfoMapper {
      * @return
      */
     int updateByPrimaryKey(PayInfo record);
+
+    /**
+     * 根据orderNo查询
+     * @param orderNo
+     * @return
+     */
+    PayInfo selectByOrderNo(Long orderNo);
+
 }

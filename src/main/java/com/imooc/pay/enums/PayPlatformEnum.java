@@ -10,7 +10,7 @@ import lombok.Getter;
 @Getter
 public enum PayPlatformEnum {
     //1-支付宝 2-微信
-    ALIPY(1),
+    ALIPAY(1),
     WX(2),
     ;
     Integer code;
@@ -19,7 +19,7 @@ public enum PayPlatformEnum {
         this.code = code;
     }
 
-    PayPlatformEnum getByBestPayTypeEnum(BestPayTypeEnum bestPayTypeEnum){
+    public static PayPlatformEnum getByBestPayTypeEnum(BestPayTypeEnum bestPayTypeEnum){
         for(PayPlatformEnum payPlatformEnum : PayPlatformEnum.values()){
             if(bestPayTypeEnum.getPlatform().name().equals(payPlatformEnum.name())){
                 return payPlatformEnum;

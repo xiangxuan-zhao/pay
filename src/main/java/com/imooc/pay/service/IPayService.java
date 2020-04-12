@@ -1,5 +1,6 @@
 package com.imooc.pay.service;
 
+import com.imooc.pay.pojo.PayInfo;
 import com.lly835.bestpay.enums.BestPayTypeEnum;
 import com.lly835.bestpay.model.PayResponse;
 
@@ -25,4 +26,11 @@ public interface IPayService {
      * @return
      */
     String asyncNotify(String notify);
+
+    /**
+     * 根据订单号查询
+     * @param OrderNo
+     * @return
+     */
+    PayInfo queryByOrderId(String OrderNo);
 }
